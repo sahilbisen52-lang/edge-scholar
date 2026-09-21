@@ -20,104 +20,104 @@ from PySide6.QtPrintSupport import QPrinter
 CSS_STYLES = """
 <style>
     @page {
-        margin: 20mm 15mm 20mm 15mm;
+        margin: 15mm 15mm 15mm 15mm;
         size: A4;
     }
     body {
         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        color: #222222;
+        color: #1f2328;
         background-color: #ffffff;
-        line-height: 1.55;
-        font-size: 13px;
-        margin: 20px 30px;
+        line-height: 1.5;
+        font-size: 10pt;
     }
     h1 {
-        color: #111111;
-        font-size: 24px;
-        border-bottom: 2px solid #c47d2b;
-        padding-bottom: 8px;
-        margin-top: 20px;
-        margin-bottom: 12px;
+        color: #0f172a;
+        font-size: 17pt;
+        border-bottom: 2px solid #d97706;
+        padding-bottom: 4px;
+        margin-top: 6px;
+        margin-bottom: 8px;
     }
     h2 {
-        color: #1c1c1e;
-        font-size: 18px;
-        border-bottom: 1px solid #e5e5ea;
-        padding-bottom: 6px;
-        margin-top: 20px;
-        margin-bottom: 10px;
-    }
-    h3 {
-        color: #2c2c2e;
-        font-size: 15px;
+        color: #1e293b;
+        font-size: 12.5pt;
+        border-bottom: 1px solid #e2e8f0;
+        padding-bottom: 4px;
         margin-top: 14px;
         margin-bottom: 6px;
     }
+    h3 {
+        color: #334155;
+        font-size: 10.5pt;
+        margin-top: 10px;
+        margin-bottom: 4px;
+    }
     p {
         margin-top: 0;
-        margin-bottom: 10px;
+        margin-bottom: 6px;
+        font-size: 9.5pt;
     }
     ul, ol {
-        margin-top: 4px;
-        margin-bottom: 10px;
-        padding-left: 24px;
+        margin-top: 2px;
+        margin-bottom: 6px;
+        padding-left: 20px;
+        font-size: 9.5pt;
     }
     li {
-        margin-bottom: 4px;
+        margin-bottom: 3px;
     }
     table {
         width: 100%;
         border-collapse: collapse;
-        margin: 14px 0;
-        font-size: 12px;
+        margin: 8px 0;
+        font-size: 9pt;
     }
     th, td {
-        border: 1px solid #d1d1d6;
-        padding: 8px 12px;
+        border: 1px solid #cbd5e1;
+        padding: 5px 8px;
         text-align: left;
     }
     th {
-        background-color: #f2f2f7;
+        background-color: #f1f5f9;
         font-weight: 600;
-        color: #1c1c1e;
+        color: #0f172a;
     }
     tr:nth-child(even) {
-        background-color: #fafafa;
+        background-color: #f8fafc;
     }
     code {
-        font-family: "SF Mono", Menlo, Consolas, Monaco, monospace;
-        font-size: 11.5px;
-        background-color: #f2f2f7;
-        padding: 2px 5px;
-        border-radius: 4px;
+        font-family: Menlo, Monaco, Consolas, monospace;
+        font-size: 8.5pt;
+        background-color: #f1f5f9;
+        padding: 2px 4px;
+        border-radius: 3px;
     }
     pre {
-        background-color: #f7f7f8;
-        border: 1px solid #e5e5ea;
-        border-radius: 6px;
-        padding: 12px;
-        overflow-x: auto;
-        font-family: "SF Mono", Menlo, Consolas, Monaco, monospace;
-        font-size: 11px;
-        line-height: 1.45;
+        background-color: #f8fafc;
+        border: 1px solid #e2e8f0;
+        border-radius: 4px;
+        padding: 6px 10px;
+        font-family: Menlo, Monaco, Consolas, monospace;
+        font-size: 8pt;
+        line-height: 1.35;
     }
     hr {
         border: none;
-        border-top: 1px solid #e5e5ea;
-        margin: 20px 0;
+        border-top: 1px solid #e2e8f0;
+        margin: 12px 0;
     }
     strong {
-        color: #111111;
+        color: #0f172a;
     }
-    .header-badge {
+    .badge {
         display: inline-block;
-        background-color: #c47d2b;
+        background-color: #d97706;
         color: #ffffff;
         font-weight: bold;
-        font-size: 11px;
-        padding: 3px 8px;
-        border-radius: 4px;
-        margin-bottom: 10px;
+        font-size: 8pt;
+        padding: 2px 6px;
+        border-radius: 3px;
+        margin-bottom: 6px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
     }
@@ -145,7 +145,7 @@ def generate_proposal_documents() -> tuple[Path, Path]:
     {CSS_STYLES}
 </head>
 <body>
-    <div class="header-badge">Qualcomm Snapdragon AI Lab Challenge 2026</div>
+    <div class="badge">Qualcomm Snapdragon AI Lab Challenge 2026</div>
     {rendered_body}
 </body>
 </html>"""
@@ -154,12 +154,12 @@ def generate_proposal_documents() -> tuple[Path, Path]:
     html_out_path.write_text(full_html, encoding="utf-8")
     print(f"✅ Generated HTML: {html_out_path}")
 
-    # Generate PDF via Qt6 offscreen
+    # Generate PDF via Qt6 with ScreenResolution
     app = QGuiApplication.instance() or QGuiApplication([])
     doc = QTextDocument()
     doc.setHtml(full_html)
 
-    printer = QPrinter(QPrinter.HighResolution)
+    printer = QPrinter(QPrinter.ScreenResolution)
     printer.setOutputFormat(QPrinter.PdfFormat)
     printer.setOutputFileName(str(pdf_out_path))
 

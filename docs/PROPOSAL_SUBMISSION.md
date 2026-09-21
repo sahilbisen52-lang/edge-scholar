@@ -36,7 +36,7 @@ EdgeScholar is engineered from the ground up as a production-grade on-device AI 
   - **Speech Recognition:** `whisper_base_en` compiled for Qualcomm Hexagon NPU for real-time lecture audio transcription.
   - **Semantic Retrieval:** `all_minilm_l6_v2` for sub-millisecond dense embeddings on the NPU/CPU.
   - **Workflow Utility:** Includes `scripts/qualcomm_ai_hub_workflow.py` and `app/ai/qualcomm_ai_hub.py` for cloud-compiling and bundling QNN-optimized weights for Snapdragon hardware.
-- **Dynamic Hardware Detection:** A conservative, non-fabricated hardware probing engine ([`app/hardware/system_detector.py`](file:///Users/Sahil/.gemini/antigravity/scratch/edge-scholar/app/hardware/system_detector.py)) that detects Snapdragon X Elite/Plus processors, ARM64 architecture, and Qualcomm QNN runtime status without faking synthetic TOPS.
+- **Dynamic Hardware Detection:** A conservative, non-fabricated hardware probing engine (`app/hardware/system_detector.py`) that detects Snapdragon X Elite/Plus processors, ARM64 architecture, and Qualcomm QNN runtime status without faking synthetic TOPS.
 
 ### B. High-Precision Local RAG Pipeline
 - **Page-Preserving Parser:** Extracts clean text from PDFs (via PyMuPDF) and Markdown/textbooks while strictly tagging original physical page numbers.
