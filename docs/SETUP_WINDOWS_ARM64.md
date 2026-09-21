@@ -17,7 +17,7 @@ This document provides setup instructions for deploying EdgeScholar on **Snapdra
 
 ### Step 1: Clone or Copy Repository
 ```cmd
-git clone https://github.com/your-username/edge-scholar.git
+git clone https://github.com/sahilbisen52-lang/edge-scholar.git
 cd edge-scholar
 ```
 
