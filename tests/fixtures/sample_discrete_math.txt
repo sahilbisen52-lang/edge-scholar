@@ -1,0 +1,82 @@
+Discrete Mathematics — Study Notes
+
+Discrete Mathematics — Study Notes
+
+Chapter 1: Sets
+
+A set is a well-defined collection of distinct objects called elements or members.
+Notation: A = {1, 2, 3, 4, 5}
+
+Set operations:
+- Union (A ∪ B): elements in A, B, or both.
+- Intersection (A ∩ B): elements in both A and B.
+- Difference (A − B): elements in A but not B.
+- Complement (A'): elements not in A (within the universal set).
+- Power set P(A): set of all subsets of A.
+
+Chapter 2: Relations
+
+A relation R from set A to set B is a subset of A × B (the Cartesian product).
+A binary relation on set A is a subset of A × A.
+
+Properties of relations:
+- Reflexive: aRa for all a in A.
+- Symmetric: if aRb then bRa for all a, b in A.
+- Transitive: if aRb and bRc then aRc for all a, b, c in A.
+- Antisymmetric: if aRb and bRa then a=b.
+
+An equivalence relation is reflexive, symmetric, and transitive.
+A partial order is reflexive, antisymmetric, and transitive.
+
+Chapter 3: Functions
+
+A function f: A → B assigns to each element of A exactly one element of B.
+- Domain: the set A.
+- Codomain: the set B.
+- Range: the set of all actual output values.
+
+Types of functions:
+- Injective (one-to-one): distinct inputs map to distinct outputs.
+- Surjective (onto): every element in B has at least one preimage.
+- Bijective: both injective and surjective (a perfect pairing).
+
+Chapter 4: Graph Theory
+
+A graph G = (V, E) consists of a set of vertices V and a set of edges E.
+
+Types of graphs:
+- Undirected graph: edges have no direction.
+- Directed graph (digraph): edges have direction.
+- Weighted graph: edges have associated weights.
+- Complete graph Kn: every pair of vertices is connected.
+
+Graph terminology:
+- Degree: number of edges incident to a vertex.
+- Path: sequence of vertices connected by edges.
+- Cycle: a path that starts and ends at the same vertex.
+- Connected graph: there is a path between every pair of vertices.
+- Tree: a connected acyclic graph.
+
+Chapter 5: Logic
+
+Propositional logic deals with propositions that are either true or false.
+
+Logical connectives:
+- Negation (¬p): NOT p
+- Conjunction (p ∧ q): p AND q
+- Disjunction (p ∨ q): p OR q
+- Implication (p → q): if p then q
+- Biconditional (p ↔ q): p if and only if q
+
+Logical equivalences:
+- De Morgan's Laws: ¬(p ∧ q) ≡ ¬p ∨ ¬q and ¬(p ∨ q) ≡ ¬p ∧ ¬q
+- Double negation: ¬¬p ≡ p
+- Contrapositive: p → q ≡ ¬q → ¬p
+
+Chapter 6: Proof Techniques
+
+Direct proof: assume the hypothesis and derive the conclusion logically.
+Proof by contradiction: assume the negation and derive a contradiction.
+Proof by induction: base case + inductive step.
+- Base case: prove P(1) is true.
+- Inductive step: assume P(k) is true, prove P(k+1) is true.

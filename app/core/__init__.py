@@ -1,0 +1,1 @@
+"""EdgeScholar core package."""

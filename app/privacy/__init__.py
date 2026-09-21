@@ -1,0 +1,1 @@
+"""EdgeScholar privacy package."""

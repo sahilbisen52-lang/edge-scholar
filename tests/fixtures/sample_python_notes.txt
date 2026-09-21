@@ -1,0 +1,84 @@
+Python Programming — Study Notes
+
+Chapter 1: Data Types
+
+Python has several built-in data types:
+- int: integer numbers (e.g., 42, -7)
+- float: floating-point numbers (e.g., 3.14)
+- str: text strings (e.g., "Hello, world!")
+- bool: boolean values (True or False)
+- list: ordered, mutable sequence (e.g., [1, 2, 3])
+- tuple: ordered, immutable sequence (e.g., (1, 2, 3))
+- dict: key-value pairs (e.g., {"name": "Alice", "age": 20})
+- set: unordered collection of unique elements (e.g., {1, 2, 3})
+
+Chapter 2: Control Flow
+
+if statements:
+  if condition:
+      # execute if True
+  elif other_condition:
+      # execute if other_condition is True
+  else:
+      # execute otherwise
+
+for loops iterate over a sequence:
+  for item in collection:
+      # process item
+
+while loops execute while condition is True:
+  while condition:
+      # execute
+
+List comprehensions provide concise list creation:
+  squares = [x**2 for x in range(10)]
+
+Chapter 3: Functions
+
+def function_name(parameters):
+    # function body
+    return value
+
+Default parameters allow optional arguments:
+  def greet(name, greeting="Hello"):
+      return f"{greeting}, {name}!"
+
+*args and **kwargs allow variable arguments:
+  def func(*args, **kwargs):
+      pass
+
+Lambda functions are anonymous single-expression functions:
+  square = lambda x: x ** 2
+
+Chapter 4: Object-Oriented Programming
+
+class MyClass:
+    def __init__(self, value):
+        self.value = value
+
+    def method(self):
+        return self.value
+
+Inheritance:
+  class Child(Parent):
+      def __init__(self):
+          super().__init__()
+
+Chapter 5: Error Handling
+
+try:
+    risky_operation()
+except ValueError as e:
+    handle_value_error(e)
+except (TypeError, KeyError) as e:
+    handle_other_errors(e)
+finally:
+    cleanup()
+
+Chapter 6: File I/O
+
+with open("file.txt", "r") as f:
+    content = f.read()
+
+with open("output.txt", "w") as f:
+    f.write("Hello, file!")

@@ -1,0 +1,76 @@
+Operating Systems — Study Notes
+
+Operating Systems — Study Notes
+
+Chapter 1: Introduction to Operating Systems
+
+An operating system (OS) is system software that manages computer hardware and software
+resources and provides common services for computer programs.
+
+Chapter 2: Processes
+
+A process is a program in execution. Each process has its own memory space, program counter,
+registers, and stack. Processes are isolated from one another to prevent interference.
+
+Process States:
+- New: The process is being created.
+- Running: Instructions are being executed.
+- Waiting: The process is waiting for some event (I/O completion).
+- Ready: The process is waiting to be assigned to a CPU.
+- Terminated: The process has finished execution.
+
+Process Control Block (PCB):
+The OS maintains a PCB for each process containing: process state, process ID, program counter,
+CPU registers, CPU scheduling information, memory management information, accounting information,
+I/O status information.
+
+Chapter 3: Threads
+
+A thread is the smallest unit of execution within a process. Threads within the same process
+share memory and resources. Multi-threading allows concurrent execution within a process.
+
+Types of threads:
+- User-level threads: managed by user-space libraries without kernel support.
+- Kernel-level threads: managed directly by the operating system.
+
+Chapter 4: CPU Scheduling
+
+CPU scheduling is the mechanism by which the operating system decides which process runs on
+the CPU at any given time.
+
+Common scheduling algorithms:
+- First Come First Served (FCFS): processes are scheduled in order of arrival.
+- Shortest Job Next (SJN): the process with the smallest burst time runs first.
+- Round Robin (RR): each process gets a fixed time quantum.
+- Priority Scheduling: processes with higher priority run first.
+
+Scheduling metrics:
+- Throughput: number of processes completed per unit time.
+- Turnaround time: total time from submission to completion.
+- Waiting time: time spent in the ready queue.
+- Response time: time from submission to first response.
+
+Chapter 5: Memory Management
+
+Memory management is the function of an OS that handles the management of primary memory.
+
+Virtual memory allows the execution of processes that are not completely in memory.
+Paging is a memory management scheme that eliminates the need for contiguous allocation.
+A page table maps virtual addresses to physical addresses.
+
+Page faults occur when a program accesses a page not currently in physical memory.
+The OS must load the required page from disk (page-in) to service the fault.
+
+Replacement algorithms:
+- FIFO: replace the oldest page.
+- LRU: replace the least recently used page.
+- Optimal: replace the page that won't be used for the longest time.
+
+Chapter 6: File Systems
+
+A file system controls how data is stored and retrieved on storage devices.
+Files are organized into directories (folders) in a hierarchical tree structure.
+Common file systems: FAT32, NTFS (Windows), ext4 (Linux), APFS (macOS).
+
+File operations: create, open, read, write, seek, close, delete.
+File attributes: name, type, location, size, timestamps, permissions.
