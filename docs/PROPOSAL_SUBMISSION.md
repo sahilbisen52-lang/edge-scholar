@@ -9,7 +9,7 @@
 - **Target Hardware:** Snapdragon® X Elite & Snapdragon® X Plus powered HP PCs (e.g., HP OmniBook X, HP OmniBook Ultra)
 - **Primary Category:** On-Device AI / Education & Productivity
 - **Development & Runtime Stack:** Python 3.11+, PySide6 (Qt6), ONNX Runtime (QNN Execution Provider), FAISS, Sentence-Transformers, Qualcomm AI Hub SDK (`qai-hub`), SQLite
-- **Repository:** https://github.com/[YOUR-USERNAME]/edge-scholar
+- **Repository:** https://github.com/sahilbisen52-lang/edge-scholar
 - **License:** MIT License (Participant Solely Owned)
 
 ---
@@ -70,7 +70,7 @@ EdgeScholar replaces cluttered, robotic AI chats with a humanistic **"Study Desk
 - **Cross-Platform Compatibility:** Runs with automatic fallbacks across Windows on ARM, macOS, and Linux so evaluators and judges on any workstation can run and review the application immediately without requiring proprietary hardware setup.
 - **Zero Configuration Setup:**
   ```bash
-  git clone https://github.com/[YOUR-USERNAME]/edge-scholar.git
+  git clone https://github.com/sahilbisen52-lang/edge-scholar.git
   cd edge-scholar
   python -m venv .venv
   source .venv/bin/activate  # or .venv\Scripts\activate on Windows
